@@ -1,0 +1,113 @@
+.form {
+  width: 100%;
+  height: 351px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.form__labelDescription {
+  color: #212529;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.form__inputDescription {
+  height: 52.8px;
+  background-color: #f8f9fa;
+  padding: 0px 16px;
+  border-radius: 8px;
+  margin-bottom: 4.4px;
+}
+.form__inputDescription::placeholder,
+.form__valueContainer input::placeholder {
+  color: #868e96;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form__inputDescription:focus {
+  border: #212529 solid 1px;
+}
+.form__spanDescription {
+  color: #868e96;
+  font-size: 14px;
+  margin-bottom: 17.7px;
+}
+
+.form__values {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+.form__valueContainer {
+  width: 50%;
+  position: relative;
+}
+.form__valueContainer p,
+.form__typeValueContainer p {
+  font-size: 14px;
+  color: #212529;
+  margin-bottom: 9px;
+}
+.form__valueContainer input,
+.form__typeValueContainer select {
+  background-color: #f8f9fa;
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 0px 16px;
+}
+.form__typeValueContainer {
+  width: 50%;
+  position: relative;
+}
+.form__typeValueContainer select {
+  color: #868e96;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.form__button {
+  background-color: #fd377e;
+  color: white;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.form__button:hover {
+  background-color: #e34981;
+}
+
+.form__valueContainer input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__valueContainer::after {
+  content: "R$";
+  color: #5b6166;
+  position: absolute;
+  bottom: 13.5px;
+  right: 37px;
+}
+.form__typeValueContainer::after {
+  content: url("/src/assets/ANGLE-DOWN.svg");
+  position: absolute;
+  bottom: 14px;
+  right: 11px;
+}
+
+.form__labelDescription,
+.form__inputDescription,
+.form__spanDescription,
+.form__values,
+.form__button {
+  width: 86.5%;
+}

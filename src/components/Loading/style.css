@@ -1,0 +1,33 @@
+li {
+  margin-bottom: 32px;
+  width: 100%;
+}
+h2 {
+  width: 100%;
+  color: #5b6166;
+  font-size: 22px;
+  font-weight: 700;
+}
+.loadCard {
+  min-height: 87px;
+  padding: 0px 14px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-left: 4px solid #e9ecef;
+}
+.loadCard__bloco1 {
+  width: 330px;
+  height: 14px;
+  margin-top: 24px;
+  margin-bottom: 13px;
+}
+.loadCard__bloco2 {
+  width: 73px;
+  height: 14px;
+}
+.loadCard__bloco1,
+.loadCard__bloco2 {
+  background-color: #e9ecef;
+}

@@ -1,0 +1,40 @@
+.header {
+  height: 88px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 32px -12px #00000040;
+}
+.header__container {
+  height: 100%;
+  width: 80%;
+  min-width: 363px;
+  max-width: 978px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container img {
+  width: 123px;
+  height: 20px;
+}
+.header__container button {
+  width: 64px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  color: #5b6166;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.header__container button:hover {
+  background-color: #fd377e;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .header__container {
+    width: 60%;
+  }
+}

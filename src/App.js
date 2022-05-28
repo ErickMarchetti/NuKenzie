@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
+import { Header } from "./components/Header"
+import "./App.css"
+import { Main } from "./components/Main"
 
 function App() {
+  const [isHomePage, setIsHomePage] = useState(true)
+  const [listTransactions, setListTransactions] = useState([])
+
+  function addListTransactions(newItem) {
+    setListTransactions([...listTransactions, newItem])
+  }
+
+  function removeListTransactions(removedItemIndex) {
+    const filteredItems = listTransactions.filter(
+      (_, index) => index !== removedItemIndex
+    )
+    setListTransactions(filteredItems)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header setIsHomePage={setIsHomePage} />
+      <Main
+        addListTransactions={addListTransactions}
+        listTransactions={listTransactions}
+        removeListTransactions={removeListTransactions}
+      />
+    </>
+  )
 }
 
-export default App;
+export default App
