@@ -16,13 +16,25 @@ export function List({ listTransactions, removeListTransactions }) {
       <div className="listContainer__header">
         <h2>Resumo financeiro</h2>
 
-        <button onClick={filterType} value="todos">
+        <button
+          onClick={filterType}
+          value="todos"
+          className={filter === "todos" && "header__button--ativo"}
+        >
           Todos
         </button>
-        <button onClick={filterType} value="Entrada">
+        <button
+          onClick={filterType}
+          value="Entrada"
+          className={filter === "Entrada" && "header__button--ativo"}
+        >
           Entradas
         </button>
-        <button onClick={filterType} value="Saída">
+        <button
+          onClick={filterType}
+          value="Saída"
+          className={filter === "Saída" && "header__button--ativo"}
+        >
           Saídas
         </button>
       </div>

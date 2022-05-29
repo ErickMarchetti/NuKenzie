@@ -31,6 +31,10 @@
   color: #f8f9fa;
   background-color: #5b6166;
 }
+.listContainer__header button.header__button--ativo {
+  background-color: #fd377e;
+  color: white;
+}
 
 .listContainer__content {
   width: 100%;
