@@ -8,11 +8,15 @@ export function Form({ addListTransactions }) {
   const [inputValue, setInputValue] = useState("")
   const [inputTypeValue, setInputTypeValue] = useState("Entrada")
 
-  const notify = () => toast("Item adicionado com sucesso!")
-
-  function sendItem(e) {
+  function checker(e) {
     e.preventDefault()
 
+    const check = inputDescription !== "" && inputValue !== ""
+
+    check ? sendItem() : toast("Por favor preencha os campos corretamente")
+  }
+
+  function sendItem() {
     const newItem = {
       description: inputDescription,
       type: inputTypeValue,
@@ -22,10 +26,11 @@ export function Form({ addListTransactions }) {
     addListTransactions(newItem)
     setInputDescription("")
     setInputValue("")
+    toast("Item adicionado com sucesso!")
   }
 
   return (
-    <form className="form" onSubmit={sendItem}>
+    <form className="form" onSubmit={checker}>
       <label for="descricao" className="form__labelDescription">
         Descrição
       </label>
@@ -61,9 +66,7 @@ export function Form({ addListTransactions }) {
         </div>
       </div>
 
-      <button className="form__button" onClick={notify}>
-        Inserir valor
-      </button>
+      <button className="form__button">Inserir valor</button>
       <ToastContainer
         position="top-center"
         autoClose={3000}
